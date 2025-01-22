@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="getLocation()">Get Location</button>
+    <script>
+
+        function showLocaltion() {
+            let geo = navigator.geolocation;
+            let locationid = document.getElementById("location");
+            if (geo) {
+                geo.getCurrentPosition {
+                    (position) => {
+                        let lat = position.coords.latitude;
+                        let long = position.coords.longitude;
+                        locationid.innerHTML = 'location is lats : ${lats} and long : ${long} ';
+                    },
+                        (error) => {
+                            locationId.innerHtml = 'failed to fetch location , please allow location access';
+
+                               
+                
+
+
+
+
+
+
+
+
+
+                        }
+
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
